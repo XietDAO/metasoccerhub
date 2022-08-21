@@ -1,27 +1,83 @@
 <template>
-  <a-carousel effect="fade" autoplay dots-class="slick-dots slick-thumb">
+  <!-- <a-carousel effect="fade" autoplay dots-class="slick-dots slick-thumb">
     <div v-for="item in 4" :key="item">
       <img :src="baseUrl + 'abstract0' + item + '.jpg'" />
     </div>
-  </a-carousel>
+  </a-carousel> -->
+
+  <div class="banner-container">
+    <div class="banner-item">
+      <div class="banner-item-img-wrapper">
+        <div>
+          <img class="banner-item-img" src="../assets/babydoge.png" alt="" />
+        </div>
+      </div>
+      <div class="banner-item-info">
+        <span>Token A | Telegram | Pancake</span>
+      </div>
+    </div>
+    <div class="banner-item">
+      <div class="banner-item-img-wrapper">
+        <div class="banner-item-img-container">
+          <img class="banner-item-img" src="../assets/nanodoge.png" alt="" />
+        </div>
+      </div>
+      <div class="banner-item-info">
+        <span>Token B | Telegram | Pancake</span>
+      </div>
+    </div>
+    <div class="banner-item">
+      <div class="banner-item-img-wrapper">
+        <div class="banner-item-img-container">
+          <img class="banner-item-img" src="../assets/tdoge.png" alt="" />
+        </div>
+      </div>
+      <div class="banner-item-info">
+        <span>Token C | Telegram | Pancake</span>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      baseUrl:
-        "https://raw.githubusercontent.com/vueComponent/ant-design-vue/master/components/vc-slick/assets/img/react-slick/",
+      // baseUrl:
+      //   "https://raw.githubusercontent.com/vueComponent/ant-design-vue/master/components/vc-slick/assets/img/react-slick/",
     };
   },
   methods: {},
 };
 </script>
 <style scoped>
-/* For demo */
-.ant-carousel >>> .slick-slide {
+.banner-container {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
   text-align: center;
-  /* height: 350px; */
-  /* line-height: 160px; */
+}
+.banner-item {
+  margin: 20px;
+}
+.banner-item-img-wrapper {
+  background: #ffffff;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  /* background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0)),
+    linear-gradient(90deg, #f30000, #ff0000); */
+}
+.banner-item-img {
+  width: 100%;
+}
+.banner-item-info {
+  font-size: 20px;
+  color: black;
+}
+/* For demo */
+/* .ant-carousel >>> .slick-slide {
+  text-align: center;
   font-size: 0;
   background: #364d79;
   overflow: hidden;
@@ -35,11 +91,10 @@ export default {
   height: auto;
 }
 .ant-carousel >>> .slick-slide img {
-  /* border: 5px solid #fff; */
   display: block;
   margin: auto;
   max-width: 80%;
-}
+} */
 /* .ant-carousel >>> .slick-thumb {
   bottom: -45px;
 }

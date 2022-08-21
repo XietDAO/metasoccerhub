@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "rye";
+    src: url('./rye.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "qatarb";
+    src: url('./Qatar-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "qatarh";
+    src: url('./Qatar-Heavy.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
